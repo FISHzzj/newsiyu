@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="contentbg">
+    <image src="/images/bg/douyin-bg.jpg"></image>
+  </view>
+  <view class="douyinbtn dis-flex">
+    <button class="douyinbtn1" bindtap="yishou">已授权</button>
+    <button class="douyinbtn2" bindtap="fuzhi" data-content="{{url}}">复制链接</button>
+  </view>
+  
+</view>

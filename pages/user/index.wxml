@@ -223,9 +223,9 @@
   <view class="openbg" wx:if="{{openshow}}">
     <view class="openchuang">
       <view class="opentoptext">{{opentitle}}</view>
-      <view class="openUser tb-lr-center" wx:if="{{openUsershow}}">
-        <image src="{{avatar}}"></image>
-        <text>{{openname}}</text>
+      <view class="openUser tb-lr-center" wx:if="{{openUsershow}}" wx:for="{{ datauserlist }}" wx:key="this">
+        <image src="{{item.avatar}}"></image>
+        <text>{{item.openname}}</text>
       </view>
       <view class="openbtn dis-flex" >
         <button bindtap="guanbi">稍后操作</button>

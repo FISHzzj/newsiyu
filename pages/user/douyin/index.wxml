@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="recharge-order">
+    <scroll-view bindscrolltolower="onPageDown" scroll-y style="height: {{ scrollHeight }}px">
+      <view wx:for="{{ list.data }}" wx:key="this" class="order-item dis-flex flex-x-between flex-y-center">
+        <view class="item-left dis-flex">
+          <view class="res-img">
+            <image src="{{item.avatar}}"></image>
+          </view>
+          <view>
+            <view class="rec-status">
+              <text>{{item.openname}}</text>
+            </view>
+            <view class="rec-time">
+              <text>抖音号</text>
+            </view>
+            <view class="rec-time col-blue">
+              <text>已授权</text>
+            </view>
+          </view>
+          
+        </view>
+        <view class="item-right col-blue" bindtap="banddou">
+          <text>更新授权</text>
+        </view>
+      </view>
+      <!-- 没有记录 -->
+      <view class="yoshop-notcont" wx:if="{{ !list.data.length && !isLoading }}">
+        <text class="iconfont icon-wushuju"></text>
+        <text class="cont">亲，暂无账单明细哦</text>
+      </view>
+    </scroll-view>
+    <button class="douyinbtn" bindtap="banddou">+绑定抖音账号</button>
+  </view>
+</view>

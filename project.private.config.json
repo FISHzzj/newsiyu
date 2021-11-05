@@ -23,6 +23,18 @@
           "pathName": "pages/user/tixian/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/user/zhanhao/index",
+          "pathName": "pages/user/zhanhao/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/zhanhao/index",
+          "pathName": "pages/user/zhanhao/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

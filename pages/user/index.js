@@ -64,9 +64,7 @@ Page({
         _this.setData({
           openUsershow: true,
           opentitle:'已授权用户',
-          avatar:result.data.data[0].avatar,
-          openname: result.data.data[0].openname,
-          id: result.data.data[0].id,
+          datauserlist: result.data.data,
           openshow:true
         })
       }else{
@@ -94,7 +92,11 @@ Page({
     
   },
   shouquan(){
-    this.getDouUser();
+    // this.getDouUser();
+    wx.navigateTo({
+      url: '../user/douyin/index'
+    });
+
     
   },
   guanbi(){

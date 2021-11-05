@@ -1,0 +1,47 @@
+page, .container {
+  background: #fff;
+}
+
+.recharge-order {
+  padding: 0 30rpx;
+}
+
+.order-item {
+  font-size: 28rpx;
+  padding: 20rpx 20rpx;
+  line-height: 1.8;
+  border-bottom: 1rpx solid rgb(238, 238, 238);
+}
+
+.rec-status {
+  color: #333;
+}
+.res-img{
+  padding: 10rpx 10rpx;
+}
+.res-img image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+
+}
+.order-item .rec-time {
+  color: rgb(160, 160, 160);
+  font-size: 24rpx;
+}
+.col-blue{
+  color: #FF398D!important;
+}
+.douyinbtn{
+  width: 90%;
+  height: 90rpx;
+  line-height: 55rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  background-color: #FF398D;
+  position: fixed;
+  bottom: 10rpx;
+  font-size: 30rpx;
+  color: #fff;
+  border-radius: 50rpx;
+}

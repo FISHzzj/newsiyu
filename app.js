@@ -464,5 +464,20 @@ App({
   pdata: function(t) {
     return t.currentTarget.dataset;
   },
-
+  // 复制
+  fuzhi(e){
+    console.log(e)
+    var content = e.currentTarget.dataset.content;
+    wx.setClipboardData({
+      data: content,
+      success (res) {
+        wx.getClipboardData({
+          success (res) {
+            console.log(res.data) // data
+          }
+        })
+      }
+    })
+    
+  },
 });

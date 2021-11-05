@@ -1,0 +1,36 @@
+/* pages/user/zhanhao/index.wxss */
+.douyinbtn{
+  width: 100%;
+  height: 90rpx;
+  line-height: 55rpx;
+  /* padding: 20rpx 0; */
+  box-sizing: border-box;
+  /* background-color: #6183FE; */
+  position: fixed;
+  bottom: 0rpx;
+  font-size: 26rpx;
+  color: #fff;
+  /* border-radius: 50rpx; */
+}
+.contentbg{
+
+}
+.contentbg image{
+  width: 100%;
+  height: 100vh;
+  /* height: auto; */
+}
+.douyinbtn1{
+  width: 40%;
+  background-color: #eeeeee;
+  font-size: 26rpx;
+  line-height: 90rpx;
+}
+.douyinbtn2{
+  width: 60%;
+  background-color: #FF398D;
+  color: #fff;
+  border-radius: 0;
+  font-size: 26rpx;
+  line-height: 90rpx;
+}
