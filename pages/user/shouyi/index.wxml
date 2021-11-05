@@ -1,0 +1,44 @@
+<!--pages/user/shouyi/index.wxml-->
+<view class="shouyi">
+  <view class="shouyi_yue">
+    <view>
+      <view>订单账号余额(元)</view>
+      <view style="color: #fff;">0</view>
+      <view>账户明细></view>
+    </view>
+    <view>
+      <view>活动奖励余额(元)</view>
+      <view style="color: #fff;">0</view>
+      <view>账户明细></view>
+    </view>
+  </view>
+  <view class="tixian" bindtap="tixian">立即提现</view>
+  <view class="datetime">-/-/- 至 -/-/-</view>
+  <view class="qudao">
+    <view class="qudaotop">
+      <view>渠道</view>
+      <view>数量</view>
+      <view>付款预估收益?<text></text></view>
+    </view>
+    <view class="qudaotop qudaobg">
+      <view>抖音</view>
+      <view>0</view>
+      <view><text>￥0</text><text>></text></view>
+    </view>
+    <view class="qudaotop qudaobg">
+      <view>京东</view>
+      <view>0</view>
+      <view><text>￥0</text><text>></text></view>
+    </view>
+    <view class="qudaotop qudaobg">
+      <view>高佣购物活动</view>
+      <view>0</view>
+      <view><text>￥0</text><text>></text></view>
+    </view>
+    <view class="qudaotop qudaobg">
+      <view>限时0元购物账号</view>
+      <view>0</view>
+      <view><text>￥0</text><text>></text></view>
+    </view>
+  </view>
+</view>

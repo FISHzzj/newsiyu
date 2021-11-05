@@ -1,0 +1,55 @@
+<!--pages/team/index.wxml-->
+<view class="team" wx:if="{{bindteam}}">
+  <view class="teambg" style="background-image: url(../../images/bg/team.png);background-size: 100% 100%;">
+    <!-- <image src=""></image> -->
+  </view>
+  <view class="nobind">
+    <image src="../../images/default/team_bind.png"></image>
+    <text>需绑定邀请人</text>
+    <text>才能拥有自己的团队哦</text>
+    <view class="gobind">立即绑定</view>
+  </view>
+</view>
+<view class="team" wx:else>
+  <view class="teambg" style="background-image: url(../../images/bg/team.png);background-size: 100% 100%;">
+    <!-- <image src=""></image> -->
+    <view class="teamInfo">
+      <image src="../../images/bg/jd.png"></image>
+      <view class="teamName">
+        <text>APP小程序混合开发</text>
+        <text>用户</text>
+      </view>
+      <image src="../../images/bg/inv_bg2.png"></image>
+    </view>
+    <view class="teamlist">
+      <view>
+        <text>0</text>
+        <text>今日新增</text>
+      </view>
+      <view>
+        <text>0</text>
+        <text>昨日新增</text>
+      </view>
+      <view>
+        <text>0</text>
+        <text>本月新增</text>
+      </view>
+      <view>
+        <text>0</text>
+        <text>团队人数</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="binduser">
+  <view class="bindusertop">
+    <text>直邀用户</text>
+    <view bindtap="teamdown">团队人数<image src="../../images/icon/sx.png"></image></view>
+  </view>
+  <view class="bindusercont">直邀用户<text>0</text>人，其中授权<text>0</text>人</view>
+  <view class="nobind">
+    <image src="../../images/default/team_bind.png"></image>
+    <text>暂时没有只邀客户</text>
+    <text>去邀请更多用户下单购买吧~</text>
+  </view>
+</view>

@@ -1,0 +1,170 @@
+/* pages/team/index.wxss */
+page,text{
+  font-size: 26rpx;
+}
+.team{
+  position: relative;
+  background-color: #eeeeee;
+  
+}
+.team .teambg{
+  width: 100%;
+  height: 400rpx;
+  background-color: #FF398D;
+}
+.team .nobind{
+  width: 90%;
+  height: 600rpx;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.team .nobind image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.team .nobind text{
+  margin-top: 20rpx;
+}
+.team .nobind .gobind{
+  border: 1rpx solid #FF5D03;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  color: #FF5D03;
+  text-align: center;
+  width: 200rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+.team .teamInfo{
+  position: relative;
+  top: 120rpx;
+  display: flex;
+  align-items: center;
+
+}
+.team .teamInfo image:first-child{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 0 10rpx;
+  
+}
+.team .teamInfo .teamName{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+
+}
+.team .teamInfo .teamName text:first-child{
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10rpx;
+
+}
+.team .teamInfo .teamName text:last-child{
+  border: 1rpx solid #fff;
+  border-radius: 20rpx;
+  background-color: #F2A562;
+  width: 80rpx;
+  height: 35rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 35rpx;
+  
+
+}
+.team .teamInfo image:last-child{
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+  width: 150rpx;
+  height: 50rpx;
+  
+}
+.team .teamlist{
+  position: relative;
+  top: 38%;
+  width: 100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 100rpx; */
+  color: #fff;
+}
+.team .teamlist view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.binduser{
+  display: flex;
+  flex-direction: column;
+}
+.binduser .bindusertop{
+  display: flex;
+  width: 100%;
+  justify-content:space-between;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box; 
+}
+.binduser .bindusertop text:first-child{
+  font-weight: 600;
+  font-size: 35rpx;
+
+}
+.binduser .bindusertop view:last-child{
+  border-radius: 20rpx;
+  border: 1rpx solid #999999;
+  color: #999999;
+  padding: 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  
+}
+.binduser .bindusertop view:last-child image{
+  width: 35rpx;
+  height: 35rpx;
+}
+.binduser .bindusercont{
+  padding: 0rpx 20rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+.binduser .bindusercont text{
+  color: #F73969;
+  
+}
+
+.binduser .nobind{
+  width: 90%;
+  height: 600rpx;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+}
+.binduser .nobind image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.binduser .nobind text{
+  margin-top: 20rpx;
+}
+

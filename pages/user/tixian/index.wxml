@@ -1,0 +1,29 @@
+<!--pages/user/tixian/index.wxml-->
+<!--pages/user/tixian/index.wxml-->
+<view class="tixian">
+  <view class="tixian_yue">
+    <view style="background:url(/images/bg/yue_bg.png) 100% 100%">
+      <view>订单账号余额(元)</view>
+      <view style="color: #fff;font-size:40rpx;">0</view>
+      <!-- <view>账户明细></view> -->
+    </view>
+    <!-- <view>
+      <view>活动奖励余额(元)</view>
+      <view style="color: #fff;">0</view>
+      <view>账户明细></view>
+    </view> -->
+  </view>
+  <!-- <view class="tixian_btn" bindtap="tixian">立即提现</view> -->
+  <view class="datetime">请选择提现账户</view>
+  <view class="qudao">
+    <view class="qudaotop">
+      <view>抖音</view>
+      <view><text>0</text><text>></text></view>
+    </view>
+    <view class="qudaotop">
+      <view>京东</view>
+      <view><text>￥0</text><text>></text></view>
+    </view>
+  </view>
+</view>
+

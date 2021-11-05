@@ -1,0 +1,30 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/user/shouyi/index",
+          "pathName": "pages/user/shouyi/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/tixian/index",
+          "pathName": "pages/user/tixian/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

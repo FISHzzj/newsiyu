@@ -1,0 +1,238 @@
+<view class="container">
+  <!-- 用户信息 -->
+  <view class="user">
+    <view class="user-header" style="background-image: url('/images/user-bg.png');">
+      <!-- 已登录 -->
+      <view wx:if="{{ isLogin }}" class="user-header-cont">
+        <view class="user-header-avatar">
+          <!-- 微信头像 -->
+          <open-data class="" lang="zh_CN" type="userAvatarUrl"></open-data>
+        </view>
+        <view class="user-header-right">
+          <!-- 微信昵称 -->
+          <open-data class="user-header-cont-name" lang="zh_CN" type="userNickName"></open-data>
+          <!-- 邀请码 -->
+          <view class="user-header-grade dis-flex flex-y-center">
+            <!-- <view class="user-grade_icon">
+              <image src="/images/grade_icon.png"></image>
+            </view> -->
+            <view class="user-grade_name">
+              邀请码：<text>{{yaoqingma}}</text>
+            </view>
+            <view class="fuzhi" bindtap="fuzhi" data-content="{{yaoqingma}}">复制</view>
+          </view>
+          <view class="inv_bg">
+            <image src="/images/bg/inv_bg2.png"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 未登录 -->
+      <view wx:else class="user-header-cont" catchtap="onLogin">
+        <view class="user-header-avatar">
+          <image src="/images/default-avatar.jpg"></image>
+        </view>
+        <view class="user-header-cont-name">点击登录</view>
+      </view>
+    </view>
+    <!-- 订单导航栏 -->
+    <view class="order-navbar">
+      <form bindsubmit="onTargetOrder" data-type="all" report-submit="true">
+        <button formType="submit" class="btn-normal">
+          <view class="order-navbar-header dis-flex">
+            <text class="f-30">上月收益 0 </text>
+            <navigator class="dis-flex flex-y-center" url="/pages/user/shouyi/index">
+              <text class="f-24 col-6">收益明细</text>
+              <text class="iconfont icon-xiangyoujiantou user-orderJtou"></text>
+            </navigator>
+          </view>
+        </button>
+      </form>
+      <view class="order-navbar-footer dis-flex m-top10">
+        <view class="order-navbar-item flex-box">
+          <form bindsubmit="onTargetOrder" data-type="all" report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <!-- <text class="order-navbar__icon iconfont icon-form"></text> -->
+              <text class="order-navbar__name">今日评估</text>
+              <text class="order-badge" >0</text>
+            </button>
+          </form>
+        </view>
+        <view class="order-navbar-item flex-box">
+          <form bindsubmit="onTargetOrder" data-type="payment" report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <!-- <text class="order-navbar__icon iconfont icon-daifukuan"></text> -->
+              <text class="order-navbar__name">昨日评估</text>
+              <text class="order-badge" >0</text>
+            </button>
+          </form>
+        </view>
+        <view class="order-navbar-item flex-box">
+          <form bindsubmit="onTargetOrder" data-type="received" report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <!-- <text class="order-navbar__icon iconfont icon-daishouhuo"></text> -->
+              <text class="order-navbar__name">本月评估</text>
+              <text class="order-badge" >0</text>
+            </button>
+          </form>
+        </view>
+        <!-- <view class="order-navbar-item flex-box">
+          <form bindsubmit="onTargetOrder" data-type="refund" report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <text class="order-navbar__icon iconfont icon-shouhou"></text>
+              <text class="order-navbar__name">退款/售后</text>
+              <text class="order-badge" wx:if="{{orderCount.refund > 0}}">{{orderCount.refund}}</text>
+            </button>
+          </form>
+        </view> -->
+      </view>
+      <view class="order-navbar-footer dis-flex m-top10" style="padding: 0px 17%;font-size: 24rpx;">
+        *每月25号结算上个月确认收到货订单的收入*
+      </view>
+    </view>
+  </view>
+  <!-- 我的钱包 -->
+  <view class="my-asset dis-flex">
+    <view class="order-navbar-footer dis-flex m-top10">
+        <view class="order-navbar-item flex-box">
+          <form bindsubmit="onTargetOrder" data-type="all" report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <text class="order-navbar__icon iconfont icon-form"></text>
+              <text class="order-navbar__name">订单明细</text>
+              <!-- <text class="order-badge" >0</text> -->
+            </button>
+          </form>
+        </view>
+        <view class="order-navbar-item flex-box">
+          <form bindsubmit="onTargetOrder" data-type="payment" report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <text class="order-navbar__icon iconfont icon-daifukuan"></text>
+              <text class="order-navbar__name">等级提升</text>
+              <!-- <text class="order-badge" >0</text> -->
+            </button>
+          </form>
+        </view>
+        <view class="order-navbar-item flex-box">
+          <form bindsubmit="onTargetOrder" data-type="received" report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <text class="order-navbar__icon iconfont icon-daishouhuo"></text>
+              <text class="order-navbar__name">拉新奖励</text>
+              <!-- <text class="order-badge" >0</text> -->
+            </button>
+          </form>
+        </view>
+        <view class="order-navbar-item flex-box">
+          <form bindsubmit="onTargetOrder" data-type="refund" report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <text class="order-navbar__icon iconfont icon-shouhou"></text>
+              <text class="order-navbar__name">帮助售后</text>
+              <!-- <text class="order-badge" wx:if="{{orderCount.refund > 0}}">{{orderCount.refund}}</text> -->
+            </button>
+          </form>
+        </view>
+      </view>
+    <!-- <view class="asset-left flex-box dis-flex flex-x-center">
+      <view class="asset-left_item">
+        <form bindsubmit="onTargetWallet" report-submit="true">
+          <button formType="submit" class="btn-normal">
+            <view class="item-value dis-flex flex-x-center">
+              <text>{{ isLogin ? userInfo.balance : '0.00' }}</text>
+            </view>
+            <view class="item-name dis-flex flex-x-center">
+              <text>账户余额</text>
+            </view>
+          </button>
+        </form>
+      </view>
+      <view class="asset-left_item">
+        <form bindsubmit="onTargetPoints" report-submit="true">
+          <button formType="submit" class="btn-normal">
+            <view class="item-value dis-flex flex-x-center">
+              <text>{{ isLogin ? userInfo.points : 0 }}</text>
+            </view>
+            <view class="item-name dis-flex flex-x-center">
+              <text>可用{{ setting.points_name }}</text>
+            </view>
+          </button>
+        </form>
+      </view>
+    </view>
+    <view class="asset-right">
+      <view class="asset-right_item">
+        <form bindsubmit="onTargetWallet" report-submit="true">
+          <button formType="submit" class="btn-normal">
+            <view class="item-icon dis-flex flex-x-center">
+              <text class="iconfont icon-qianbao"></text>
+            </view>
+            <view class="item-name dis-flex flex-x-center">
+              <text>我的钱包</text>
+            </view>
+          </button>
+        </form>
+      </view>
+    </view> -->
+  </view>
+  <!-- iconfont icon-lingquan f-34 -->
+  <!-- iconfont icon-youhuiquan f-34 -->
+  <!-- iconfont icon-kanjia f-34 -->
+  <!-- 广告 -->
+  <view class="guanggao">
+    <image src="../../images/bg/mine-inv-bg.jpg"></image>
+  </view>
+  <!-- 菜单列表 -->
+  <view class="menus-list">
+    <form report-submit="true">
+      <button formType="submit" class="btn-normal" bindtap="shouquan">
+        <view class="menus-item dis-flex b-f">
+          <view class="menus-item__left flex-box dis-flex flex-y-center">
+            <text class="iconfont icon-lingquan f-34"></text>
+            <text class="menus-item__name f-30">授权</text>
+          </view>
+          <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+            <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+          </view>
+        </view>
+      </button>
+      <button formType="submit" class="btn-normal">
+        <view class="menus-item dis-flex b-f">
+          <view class="menus-item__left flex-box dis-flex flex-y-center">
+            <text class="iconfont icon-youhuiquan f-34"></text>
+            <text class="menus-item__name f-30">我的设置</text>
+          </view>
+          <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+            <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+          </view>
+        </view>
+      </button>
+    </form>
+    <!-- <form wx:for="{{ menus }}" wx:key="this" bindsubmit="onTargetMenus" data-url="{{item.url}}" report-submit="true">
+      <button formType="submit" class="btn-normal">
+        <view class="menus-item dis-flex b-f">
+          <view class="menus-item__left flex-box dis-flex flex-y-center">
+            <text class="iconfont icon-{{ item.icon }} f-34"></text>
+            <text class="menus-item__name f-30">{{ item.name }}</text>
+          </view>
+          <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+            <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+          </view>
+        </view>
+      </button>
+    </form> -->
+  </view>
+
+  <!-- 弹窗 -->
+  <view class="openbg" wx:if="{{openshow}}">
+    <view class="openchuang">
+      <view class="opentoptext">{{opentitle}}</view>
+      <view class="openUser tb-lr-center" wx:if="{{openUsershow}}">
+        <image src="{{avatar}}"></image>
+        <text>{{openname}}</text>
+      </view>
+      <view class="openbtn dis-flex" >
+        <button bindtap="guanbi">稍后操作</button>
+        <button bindtap="fuzhi" data-content="{{url}}">前往授权</button>
+      </view>
+  </view>
+  </view>
+  
+
+</view>

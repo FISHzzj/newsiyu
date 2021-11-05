@@ -1,0 +1,75 @@
+/* pages/user/shouyi/index.wxss */
+.shouyi{
+  font-size: 30rpx;
+
+}
+.shouyi .shouyi_yue{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.shouyi .shouyi_yue>view{
+  padding: 10rpx 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  background-color: #999999;
+  width: 48%;
+  border-radius: 10rpx;
+  color: #eeeeee;
+
+}
+.tixian{
+  width: 95%;
+  margin: 20rpx 20rpx;
+  background-color: #d83e3e;
+  color: #ffffff;
+  text-align: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+.datetime{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+
+}
+.qudao {
+  margin: 30rpx 30rpx;
+}
+.qudao .qudaotop{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30rpx 30rpx;
+  box-sizing: border-box;
+  color: #999999;
+  background-color: #eeeeee;
+}
+.qudao .qudaotop view:nth-child(1){
+  width: 40%;
+}
+.qudao .qudaotop view:nth-child(2){
+  width: 20%;
+}
+.qudao .qudaotop view:nth-child(3){
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.qudaobg{
+  background-color: #f8eeee!important;
+  border-bottom: 1rpx solid #cecccc;
+}
+
+
+
+
