@@ -78,8 +78,8 @@ page {
 
 }
 .fenglei .fl_tou .fl_item text:first-child{
-  font-size: 35rpx;
-  font-weight: 700;
+  font-size: 30rpx;
+  font-weight: 550;
   color: #000;
   margin-bottom: 10rpx;
   white-space: nowrap;
@@ -92,7 +92,7 @@ page {
 
 .fl_active{
   color: #FF398D!important;
-  font-size: 40rpx!important;
+  font-size: 35rpx!important;
 }
 .fl_text_active{
   border: 1rpx solid #FF398D;
@@ -100,7 +100,7 @@ page {
   box-sizing: border-box;
   color: #ffffff;
   background-color: #FF398D;
-  font-size: 30rpx!important;
+  font-size: 25rpx!important;
   border-radius: 30rpx;
   
 }

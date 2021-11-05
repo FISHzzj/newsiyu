@@ -185,7 +185,7 @@
         <view class="menus-item dis-flex b-f">
           <view class="menus-item__left flex-box dis-flex flex-y-center">
             <text class="iconfont icon-lingquan f-34"></text>
-            <text class="menus-item__name f-30">授权</text>
+            <text class="menus-item__name f-30">抖音授权</text>
           </view>
           <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
             <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
