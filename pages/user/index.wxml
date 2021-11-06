@@ -21,7 +21,7 @@
             </view>
             <view class="fuzhi" bindtap="fuzhi" data-content="{{yaoqingma}}">复制</view>
           </view>
-          <view class="inv_bg">
+          <view class="inv_bg" bindtap="invite">
             <image src="/images/bg/inv_bg2.png"></image>
           </view>
         </view>
@@ -155,8 +155,8 @@
           </button>
         </form>
       </view>
-    </view>
-    <view class="asset-right">
+    </view> -->
+    <!-- <view class="asset-right">
       <view class="asset-right_item">
         <form bindsubmit="onTargetWallet" report-submit="true">
           <button formType="submit" class="btn-normal">
@@ -192,7 +192,7 @@
           </view>
         </view>
       </button>
-      <button formType="submit" class="btn-normal">
+      <button formType="submit" class="btn-normal" bindtap="setting">
         <view class="menus-item dis-flex b-f">
           <view class="menus-item__left flex-box dis-flex flex-y-center">
             <text class="iconfont icon-youhuiquan f-34"></text>

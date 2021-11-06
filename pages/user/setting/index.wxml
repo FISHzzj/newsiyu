@@ -1,0 +1,106 @@
+<view class="container">
+    <view class="menus-list">
+        <form report-submit="true">
+            <button formType="submit" class="btn-normal" bindtap="shouquan">
+                <view class="menus-item dis-flex b-f">
+                <view class="menus-item__left flex-box dis-flex flex-y-center">
+                    <!-- <text class="iconfont icon-lingquan f-34"></text> -->
+                    <text class="menus-item__name f-30">头像</text>
+                </view>
+                <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+                    <image src="/images/bg/user-bg.png"></image>
+                    <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+                </view>
+                </view>
+            </button>
+            <button formType="submit" class="btn-normal" bindtap="setting">
+                <view class="menus-item dis-flex b-f">
+                <view class="menus-item__left flex-box dis-flex flex-y-center">
+                    <!-- <text class="iconfont icon-youhuiquan f-34"></text> -->
+                    <text class="menus-item__name f-30">用户昵称</text>
+                </view>
+                <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+                    <text class=" f-26 col-7">zzj</text>
+                    <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+                </view>
+                </view>
+            </button>
+            <button formType="submit" class="btn-normal" bindtap="shouquan">
+                <view class="menus-item dis-flex b-f">
+                <view class="menus-item__left flex-box dis-flex flex-y-center">
+                    <!-- <text class="iconfont icon-lingquan f-34"></text> -->
+                    <text class="menus-item__name f-30">手机号</text>
+                </view>
+                <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+                    <text class=" f-26 col-7">184111111111</text>
+                    <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+                </view>
+                </view>
+            </button>
+            <button formType="submit" class="btn-normal" bindtap="setting">
+                <view class="menus-item dis-flex b-f">
+                <view class="menus-item__left flex-box dis-flex flex-y-center">
+                    <!-- <text class="iconfont icon-youhuiquan f-34"></text> -->
+                    <text class="menus-item__name f-30">微信绑定</text>
+                </view>
+                <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+                    <text class=" f-26 col-7">解除绑定</text>
+                    <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+                </view>
+                </view>
+            </button>
+            <button formType="submit" class="btn-normal" bindtap="shouquan">
+                <view class="menus-item dis-flex b-f">
+                <view class="menus-item__left flex-box dis-flex flex-y-center">
+                    <!-- <text class="iconfont icon-lingquan f-34"></text> -->
+                    <text class="menus-item__name f-30">实名认证</text>
+                </view>
+                <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+                    <text class=" f-26 col-7">未实名</text>
+                    <!-- <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text> -->
+                </view>
+                </view>
+            </button>
+            <button formType="submit" class="btn-normal" bindtap="setting">
+                <view class="menus-item dis-flex b-f">
+                <view class="menus-item__left flex-box dis-flex flex-y-center">
+                    <!-- <text class="iconfont icon-youhuiquan f-34"></text> -->
+                    <text class="menus-item__name f-30">VIP等级</text>
+                </view>
+                <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+                    <!-- <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text> -->
+                    <text class=" f-26 col-7">普通会员</text>
+                </view>
+                </view>
+            </button>
+            <button formType="submit" class="btn-normal" bindtap="shouquan">
+                <view class="menus-item dis-flex b-f">
+                <view class="menus-item__left flex-box dis-flex flex-y-center">
+                    <!-- <text class="iconfont icon-lingquan f-34"></text> -->
+                    <text class="menus-item__name f-30">推广等级</text>
+                </view>
+                <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+                    <text class=" f-26 col-7">VIP</text>
+                    <!-- <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text> -->
+                </view>
+                </view>
+            </button>
+            <button formType="submit" class="btn-normal" bindtap="setting">
+                <view class="menus-item dis-flex b-f">
+                <view class="menus-item__left flex-box dis-flex flex-y-center">
+                    <!-- <text class="iconfont icon-youhuiquan f-34"></text> -->
+                    <text class="menus-item__name f-30">我的邀请码</text>
+                </view>
+                <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+                    <text class=" f-26 col-7">4515452</text>
+                    <!-- <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text> -->
+                </view>
+                </view>
+            </button>
+     
+        </form>
+    </view>
+</view>
+
+
+

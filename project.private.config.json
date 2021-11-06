@@ -1,42 +1,60 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/user/shouyi/index",
-          "pathName": "pages/user/shouyi/index",
-          "query": "",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "pages/user/tixian/index",
-          "pathName": "pages/user/tixian/index",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "pages/user/zhanhao/index",
-          "pathName": "pages/user/zhanhao/index",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "pages/user/zhanhao/index",
-          "pathName": "pages/user/zhanhao/index",
-          "query": "",
-          "scene": null
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/user/shouyi/index",
+                    "pathName": "pages/user/shouyi/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/user/tixian/index",
+                    "pathName": "pages/user/tixian/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/user/zhanhao/index",
+                    "pathName": "pages/user/zhanhao/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/user/zhanhao/index",
+                    "pathName": "pages/user/zhanhao/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/user/invite/index",
+                    "pathName": "pages/user/invite/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/detail/index",
+                    "pathName": "pages/detail/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/user/setting/index",
+                    "pathName": "pages/user/setting/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

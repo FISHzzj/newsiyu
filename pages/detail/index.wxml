@@ -25,13 +25,13 @@
     <image src="/images/bg/jd.png" wx:for="{{5}}" wx:item="{{item}}" wx:key="index"></image>
   </view>
   <view class="detail_btn">
-    <view>
-      <view>立即分享</view>
-      <view>赚￥0</view>
-    </view>
-    <view>
-      <view>立即购买</view>
-      <view>省￥5.05</view>
-    </view>
+    <button open-type="share" class="dis-flex flex-dir-column flex-x-center" >
+      <text>立即分享</text>
+      <!-- <text>赚￥0</text> -->
+    </button>
+    <button class="dis-flex flex-dir-column flex-x-center " >
+      <text>立即购买</text>
+      <!-- <text>省￥5.05</text> -->
+    </button>
   </view>
 </view>

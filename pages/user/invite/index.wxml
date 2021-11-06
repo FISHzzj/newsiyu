@@ -1,0 +1,24 @@
+<view class="container">
+    <swiper class="swiper" circular="true" display-multiple-items="1" previous-margin='70rpx' next-margin="70rpx"
+        indicator-active-color="#FF6315" bindchange="bindchange">
+        <swiper-item class="back center dis-flex flex-dir-column flex-x-center" wx:for='{{imgUrls}}' wx:for-index="index">
+          <view class="wrap">
+            <image class="back cradBg {{swiperIndex==index?'active':'quiet'}}" src='{{item.img}}'></image>
+            <!-- <view class="txtBox">
+                <view class="flag" wx:if="{{swiperIndex==index?true:false}}">临时会员</view>
+                <view class="brandLogo"><image  src="{{item.img}}"></image></view>
+                <text class="plateNum">京A J234</text>
+                <text class="color_ carType">宝马x1 2018时尚款</text>
+                <text class="line" wx:if="{{swiperIndex==index?true:false}}"></text>
+                <text class="carShop">哈尔滨运通俊晟一汽奥迪4S店</text>
+                <text class="name cardNum color_">卡号：17600090009</text>
+                <text class="name color_">德玛西亚</text>
+            </view> -->
+          </view>
+        </swiper-item>
+    </swiper>
+    <view class="invitebtn dis-flex flex-x-between">
+        <view>生成图片</view>
+        <view>分享小程序</view>
+    </view>
+</view>

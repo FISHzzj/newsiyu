@@ -77,6 +77,11 @@ Page({
       }
     });
   },
+  invite(){
+    wx.navigateTo({
+      url: '/pages/user/invite/index'
+    });
+  },
   fuzhi(e){
     var content = e.currentTarget.dataset.content;
     wx.setClipboardData({
@@ -163,7 +168,11 @@ Page({
       url: '../points/log/index'
     });
   },
-
+  setting(){
+    wx.navigateTo({
+      url: '/pages/user/setting/index'
+    })
+  },
   /**
    * 跳转到登录页
    */

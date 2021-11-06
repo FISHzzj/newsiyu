@@ -1,0 +1,21 @@
+/* 菜单列表 */
+
+.menus-list {
+    margin-top: 20rpx;
+}
+  
+.menus-list .menus-item {
+    position: relative;
+    padding: 28rpx 28rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.menus-list .menus-item .menus-item__name {
+    color: #444;
+    margin-left: 20rpx;
+}
+.menus-item__right image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
