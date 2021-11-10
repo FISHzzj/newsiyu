@@ -18,8 +18,39 @@
         </swiper-item>
     </swiper>
   </view>
+  <view class="daohan">
+    <view>
+      <image src="../../images/home/pinduoduo.png"></image>
+      <text>拼多多</text>
+    </view>
+    <view>
+      <image src="../../images/home/jingdongicon-.png"></image>
+      <text>京东</text>
+    </view>
+    <view>
+      <image src="../../images/home/meituan.png"></image>
+      <text>美团红包</text>
+    </view>
+    <view>
+      <image src="../../images/home/elemo.png"></image>
+      <text>饿了么红包</text>
+    </view>
+    <view>
+      <image src="../../images/home/a-08-yidonghuafei.png"></image>
+      <text>话费优惠</text>
+    </view>
+    
+  </view>
+  <view class="shengji">升级专区</view>
   <view class="guanggao">
-    <image src="../../images/bg/mine-inv-bg.jpg"></image>
+    <!-- <image src="../../images/bg/mine-inv-bg.jpg"></image> -->
+    <view class="ggfirst">
+      <image src="../../images/bg/ly1.png"></image>
+    </view>
+    <view class="ggsen">
+      <image src="../../images/bg/poster_bg.png"></image>
+      <image src="../../images/bg/jd.png"></image>
+    </view>
   </view>
   <view class="fenglei">
     <view class="fl_tou">
@@ -58,6 +89,30 @@
       </view>
     </view>
     <view class="fl_shop">
+      <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index" >
+        <image src="https://img.pddpic.com/gaudit-image/2021-09-28/41f8508d59f89923aa5185b4be535425.jpeg"></image>
+        <view class="title">黑色罗安卡拉的积分拉屎</view>
+        <view class="fl_item_pt">
+          <text>自购省5.20远</text>
+          <text>分享赚0元</text>
+        </view>
+        <view class="fl_item_price">
+          <text>￥39.9</text>
+          <text>抢 ></text>
+        </view>
+      </navigator>
+      <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index">
+        <image src="https://img.pddpic.com/gaudit-image/2021-09-28/41f8508d59f89923aa5185b4be535425.jpeg"></image>
+        <view class="title">黑色罗安卡拉的积分拉屎</view>
+        <view class="fl_item_pt">
+          <text>自购省5.20远</text>
+          <text>分享赚0元</text>
+        </view>
+        <view class="fl_item_price">
+          <text>￥39.9</text>
+          <text>抢 ></text>
+        </view>
+      </navigator>
       <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index">
         <image src="https://img.pddpic.com/gaudit-image/2021-09-28/41f8508d59f89923aa5185b4be535425.jpeg"></image>
         <view class="title">黑色罗安卡拉的积分拉屎</view>

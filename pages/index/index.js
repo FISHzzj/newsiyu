@@ -23,7 +23,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     // 加载页面数据
+     this.getPageData();
   },
 
   /**
@@ -38,6 +39,22 @@ Page({
    */
   onShow: function () {
 
+  },
+   /**
+   * 加载页面数据
+   */
+  getPageData(callback) {
+    let _this = this;
+    App._get('goods/lists', {
+      // page_id: _this.data.options.page_id || 0
+    }, result => {
+      // 设置顶部导航栏栏
+      // _this.setPageBar(result.data.page);
+      console.log(result.data)
+      _this.setData(result.data.list);
+      // 回调函数
+      typeof callback === 'function' && callback();
+    });
   },
   getshop(e){
     var active = App.pdata(e).active;
