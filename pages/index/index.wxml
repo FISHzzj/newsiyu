@@ -89,54 +89,19 @@
       </view>
     </view>
     <view class="fl_shop">
-      <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index" >
-        <image src="https://img.pddpic.com/gaudit-image/2021-09-28/41f8508d59f89923aa5185b4be535425.jpeg"></image>
-        <view class="title">黑色罗安卡拉的积分拉屎</view>
+      <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index?id={{item.goods_id}}" wx:for="{{ list.data }}" wx:key="this" >
+        <image src="{{item.goods_image}}"></image>
+        <view class="title">{{item.goods_name}}</view>
         <view class="fl_item_pt">
-          <text>自购省5.20远</text>
-          <text>分享赚0元</text>
+          <text>自购省{{item.savemoney}}元</text>
+          <text>分享赚{{item.sharemoney}}元</text>
         </view>
         <view class="fl_item_price">
-          <text>￥39.9</text>
+          <text>￥{{item.price}}</text>
           <text>抢 ></text>
         </view>
       </navigator>
-      <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index">
-        <image src="https://img.pddpic.com/gaudit-image/2021-09-28/41f8508d59f89923aa5185b4be535425.jpeg"></image>
-        <view class="title">黑色罗安卡拉的积分拉屎</view>
-        <view class="fl_item_pt">
-          <text>自购省5.20远</text>
-          <text>分享赚0元</text>
-        </view>
-        <view class="fl_item_price">
-          <text>￥39.9</text>
-          <text>抢 ></text>
-        </view>
-      </navigator>
-      <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index">
-        <image src="https://img.pddpic.com/gaudit-image/2021-09-28/41f8508d59f89923aa5185b4be535425.jpeg"></image>
-        <view class="title">黑色罗安卡拉的积分拉屎</view>
-        <view class="fl_item_pt">
-          <text>自购省5.20远</text>
-          <text>分享赚0元</text>
-        </view>
-        <view class="fl_item_price">
-          <text>￥39.9</text>
-          <text>抢 ></text>
-        </view>
-      </navigator>
-      <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index">
-        <image src="https://img.pddpic.com/gaudit-image/2021-09-28/41f8508d59f89923aa5185b4be535425.jpeg"></image>
-        <view class="title">黑色罗安卡拉的积分拉屎</view>
-        <view class="fl_item_pt">
-          <text>自购省5.20远</text>
-          <text>分享赚0元</text>
-        </view>
-        <view class="fl_item_price">
-          <text>￥39.9</text>
-          <text>抢 ></text>
-        </view>
-      </navigator>
+      
     </view>
   </view>
 </view>

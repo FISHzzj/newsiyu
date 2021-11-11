@@ -51,7 +51,8 @@ Page({
       // 设置顶部导航栏栏
       // _this.setPageBar(result.data.page);
       console.log(result.data)
-      _this.setData(result.data.list);
+      _this.setData(result.data);
+      console.log(_this.data)
       // 回调函数
       typeof callback === 'function' && callback();
     });
