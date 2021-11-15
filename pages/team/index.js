@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getUserDetail()
   },
 
   /**
@@ -28,6 +28,17 @@ Page({
    */
   onShow: function () {
 
+  },
+
+    /**
+   * 获取当前用户信息
+   */
+  getUserDetail() {
+    let _this = this;
+    App._get('user.index/detail', {}, function (result) {
+      console.log(result)
+      _this.setData(result.data);
+    });
   },
   //选择
   teamdown(){

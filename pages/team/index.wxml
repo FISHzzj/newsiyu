@@ -4,7 +4,7 @@
     <!-- <image src=""></image> -->
   </view>
   <view class="nobind">
-    <image src="../../images/default/team_bind.png"></image>
+    <image src="{{userInfo.avatarUrl}}"></image>
     <text>需绑定邀请人</text>
     <text>才能拥有自己的团队哦</text>
     <view class="gobind">立即绑定</view>
@@ -14,9 +14,9 @@
   <view class="teambg" style="background-image: url(../../images/bg/team.png);background-size: 100% 100%;">
     <!-- <image src=""></image> -->
     <view class="teamInfo">
-      <image src="../../images/bg/jd.png"></image>
+      <image src="{{userInfo.avatarUrl}}"></image>
       <view class="teamName">
-        <text>APP小程序混合开发</text>
+        <text>{{userInfo.nickName}}</text>
         <text>用户</text>
       </view>
       <image src="../../images/bg/inv_bg2.png"></image>

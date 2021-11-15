@@ -24,7 +24,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.getPageData()
     },
 
     /**
@@ -45,6 +45,23 @@ Page({
 
         this.setData({
             swiperIndex:e.detail.current
+        })
+    },
+     /**
+     * 加载页面数据
+     */
+    getPageData() {
+        let _this = this;
+        App._get('user.dealer.Qrcode/poster', {
+        // page_id: _this.data.options.page_id || 0
+        }, result => {
+            // 设置顶部导航栏栏
+            // _this.setPageBar(result.data.page);
+            console.log(result.data)
+            _this.setData({
+                imgUrls: [{"img": result.data.qrcode}]
+            });
+      
         })
     },
 

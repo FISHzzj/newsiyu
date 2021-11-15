@@ -53,6 +53,12 @@
                     "pathName": "pages/user/setting/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/user/invite/index",
+                    "pathName": "pages/user/invite/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

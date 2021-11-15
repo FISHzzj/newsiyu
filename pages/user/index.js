@@ -9,7 +9,7 @@ Page({
     isLogin: false,
     userInfo: {}, // 用户信息
     orderCount: {}, // 订单数量
-    yaoqingma:'18402015569',
+    yaoqingma:'暂无',
     openshow: false,
     url:"",
     opentitle:'请完成授权',
