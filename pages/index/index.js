@@ -25,6 +25,7 @@ Page({
   onLoad: function (options) {
      // 加载页面数据
      this.getPageData();
+     this.getbanner();
   },
 
   /**
@@ -40,6 +41,20 @@ Page({
   onShow: function () {
 
   },
+  getbanner(){
+    let _this = this;
+    App._get('shop/banner', {
+      // page_id: _this.data.options.page_id || 0
+    }, result => {
+ 
+      console.log(result.data)
+      _this.setData({
+        banner: result.data
+      });
+  
+      
+    });
+  },
    /**
    * 加载页面数据
    */
@@ -51,7 +66,8 @@ Page({
       // 设置顶部导航栏栏
       // _this.setPageBar(result.data.page);
       console.log(result.data)
-      _this.setData(result.data.list);
+      _this.setData(result.data);
+     
       // 回调函数
       typeof callback === 'function' && callback();
     });

@@ -168,3 +168,20 @@ page,text{
   margin-top: 20rpx;
 }
 
+.teamlist{
+
+}
+.teamitem{
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+.teamitem .teamleft image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+
+}
+.nextpage{
+  margin-left: 20rpx;
+}
+

@@ -171,6 +171,7 @@ page {
 }
 .fl_shop .fl_item_shop{
   width: 48%;
+  margin-bottom: 10rpx;
 
 }
 .fl_shop .fl_item_shop image{
@@ -179,7 +180,7 @@ page {
   border-radius: 10rpx;
 }
 .fl_shop .fl_item_shop .title{
-  width: 375rpx;
+  width: 335rpx;
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;

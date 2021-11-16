@@ -13,7 +13,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getUserDetail()
+    this.getUserDetail();
+    this.getteam();
   },
 
   /**
@@ -38,6 +39,17 @@ Page({
     App._get('user.index/detail', {}, function (result) {
       console.log(result)
       _this.setData(result.data);
+    });
+  },
+    /**
+   * 获取 团队数据
+   */
+  getteam() {
+    let _this = this;
+    App._get('user/teamlist', {}, function (result) {
+      console.log(result)
+      _this.setData(result.data);
+      console.log(_this.data)
     });
   },
   //选择

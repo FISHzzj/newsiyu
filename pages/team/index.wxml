@@ -23,19 +23,19 @@
     </view>
     <view class="teamlist">
       <view>
-        <text>0</text>
+        <text>{{today_total}}</text>
         <text>今日新增</text>
       </view>
       <view>
-        <text>0</text>
+        <text>{{yesterday_total}}</text>
         <text>昨日新增</text>
       </view>
       <view>
-        <text>0</text>
+        <text>{{month_total}}</text>
         <text>本月新增</text>
       </view>
       <view>
-        <text>0</text>
+        <text>{{list.total}}</text>
         <text>团队人数</text>
       </view>
     </view>
@@ -46,10 +46,29 @@
     <text>直邀用户</text>
     <view bindtap="teamdown">团队人数<image src="../../images/icon/sx.png"></image></view>
   </view>
-  <view class="bindusercont">直邀用户<text>0</text>人，其中授权<text>0</text>人</view>
-  <view class="nobind">
+  <view class="bindusercont">直邀用户<text>{{push_total}}</text>人，其中授权<text>{{auth_total}}</text>人</view>
+  
+  <view class="nobind" wx:if="{{list.data.length == 0}}">
     <image src="../../images/default/team_bind.png"></image>
     <text>暂时没有只邀客户</text>
     <text>去邀请更多用户下单购买吧~</text>
+  </view>
+  <view class="teamlist" wx:else>
+    <view class="teamitem dis-flex flex-x-between" wx:for='{{list.data}}' wx:for-index="index">
+      <view class="teamleft dis-flex flex-y-center">
+        <image src="{{item.avatarUrl}}"></image>
+        <view>{{item.nickName}}</view>
+      </view>
+      <view class="teamright dis-flex  flex-y-center">
+        <view class="dis-flex flex-dir-column flex-y-end">
+          <text>{{item.total}}</text>
+          <text style="color: #999999;">团队人数</text>
+        </view>
+        <view class="nextpage">
+          <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+        </view>
+        
+      </view>
+    </view>
   </view>
 </view>

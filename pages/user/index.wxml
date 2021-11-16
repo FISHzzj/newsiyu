@@ -17,9 +17,9 @@
               <image src="/images/grade_icon.png"></image>
             </view> -->
             <view class="user-grade_name">
-              邀请码：<text>{{yaoqingma}}</text>
+              邀请码：<text>{{userInfo.invite_code}}</text>
             </view>
-            <view class="fuzhi" bindtap="fuzhi" data-content="{{yaoqingma}}">复制</view>
+            <view class="fuzhi" bindtap="fuzhi" data-content="{{userInfo.invite_code}}">复制</view>
           </view>
           <view class="inv_bg" bindtap="invite">
             <image src="/images/bg/inv_bg2.png"></image>
