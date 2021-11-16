@@ -18,7 +18,9 @@
         </swiper-item>
     </swiper>
     <view class="invitebtn dis-flex flex-x-between">
-        <view>生成图片</view>
-        <view>分享小程序</view>
+        <view bindtap="showBigImg">生成图片</view>
+        <button open-type="share" class="dis-flex flex-dir-column flex-x-center" >
+          <text>分享小程序</text>
+        </button>
     </view>
 </view>

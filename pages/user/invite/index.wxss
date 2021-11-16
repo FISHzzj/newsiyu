@@ -51,7 +51,11 @@ swiper{
     text-align: center;
     color: #FF398D;
 }
-.invitebtn view:nth-child(2){
+.invitebtn button{
+    border: 1rpx solid #FF398D;
+    border-radius: 50rpx;
+    width: 45%;
+    text-align: center;
     background-color: #FF398D;
     color: #ffffff;
 }
