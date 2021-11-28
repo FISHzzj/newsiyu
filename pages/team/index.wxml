@@ -17,7 +17,7 @@
       <image src="{{userInfo.avatarUrl}}"></image>
       <view class="teamName">
         <text>{{userInfo.nickName}}</text>
-        <text>用户</text>
+        <text>{{userInfo.grade.name}}</text>
       </view>
       <image src="../../images/bg/inv_bg2.png"></image>
     </view>

@@ -27,7 +27,21 @@ Page({
      this.getPageData();
      this.getbanner();
   },
-
+  poster_bg(){
+    wx.navigateTo({
+      url: '/pages/detail/index?id=4',
+    })
+  },
+  jd(){
+    wx.navigateTo({
+      url: '/pages/detail/index?id=3',
+    })
+  },
+  gojingdong(){
+    wx.navigateTo({
+      url: '/pages/category/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

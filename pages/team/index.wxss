@@ -72,7 +72,7 @@ page,text{
   border: 1rpx solid #fff;
   border-radius: 20rpx;
   background-color: #F2A562;
-  width: 80rpx;
+  width: 125rpx;
   height: 35rpx;
   color: #fff;
   text-align: center;

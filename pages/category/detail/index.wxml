@@ -3,27 +3,27 @@
   <view class="goback" bindtap="goback"><image src="/images/fanhui.png"></image></view>
   <view class="swiper">
     <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <swiper-item wx:for="{{detail.image}}" class="item" wx:key="{{index}}">
+        <swiper-item wx:for="{{itemCouponInfo.imageInfo.imageList}}" class="item" wx:key="{{index}}">
             <navigator>
-                <image class="pic" src="{{item.file_path}}"></image>
+                <image class="pic" src="{{item.url}}"></image>
             </navigator>
         </swiper-item>
     </swiper>
   </view>
   <view class="detail_title">
-    <view class="detail_name">{{detail.goods_name}}</view>
-    <view class="detail_price">￥{{detail.price}}</view>
+    <view class="detail_name">{{itemCouponInfo.skuName}}</view>
+    <view class="detail_price">￥{{itemCouponInfo.priceInfo.price}}</view>
     <view class="detail_shopname">
       <view class="detail_shop">
         <image src="/images/icon/shop.png"></image>
         <text>索森食品专营店</text>
       </view>
-      <view>30天已售{{detail.goods_sales}}</view>
+      <view>30天已售{{itemCouponInfo.comments}}</view>
     </view>
   </view>
   <view class="detail_img" >
-    <!-- <image src="/images/bg/jd.png" wx:for="{{5}}" wx:item="{{item}}" wx:key="index"></image> -->
-    <rich-text nodes="{{detailcontent}}"></rich-text>
+    <image src="{{item}}" wx:for="{{descPic}}" wx:item="{{item}}" wx:key="index"></image>
+    <!-- <rich-text nodes="{{detailcontent}}"></rich-text> -->
   </view>
   <view class="detail_btn">
     <button open-type="share" class="dis-flex flex-dir-column flex-x-center" >
@@ -31,7 +31,7 @@
       <!-- <text>赚￥0</text> -->
     </button>
     <button class="dis-flex flex-dir-column flex-x-center " >
-      <text bindtap='copyText' data-text="https://u.jd.com/nwug4sb">复制链接</text>
+      <text bindtap='copyText' data-text="{{urljd}}">复制链接</text>
       <!-- <text>省￥5.05</text> -->
     </button>
   </view>

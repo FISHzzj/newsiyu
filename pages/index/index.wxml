@@ -23,7 +23,7 @@
       <image src="../../images/home/pinduoduo.png"></image>
       <text>拼多多</text>
     </view>
-    <view>
+    <view bindtap="gojingdong">
       <image src="../../images/home/jingdongicon-.png"></image>
       <text>京东</text>
     </view>
@@ -44,12 +44,12 @@
   <view class="shengji">升级专区</view>
   <view class="guanggao">
     <!-- <image src="../../images/bg/mine-inv-bg.jpg"></image> -->
-    <view class="ggfirst">
+    <view class="ggfirst" >
       <image src="../../images/bg/ly1.png"></image>
     </view>
     <view class="ggsen">
-      <image src="../../images/bg/poster_bg.png"></image>
-      <image src="../../images/bg/jd.png"></image>
+      <image src="../../images/bg/poster_bg.png" ></image>
+      <image src="../../images/bg/jd.png" ></image>
     </view>
   </view>
   <view class="fenglei">

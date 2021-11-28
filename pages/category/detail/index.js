@@ -26,6 +26,7 @@ Page({
     _this.setData(options);
     console.log(_this.data)
     _this.getPageData();
+   
   },
   copyText: function (e) {
     console.log(e)
@@ -61,23 +62,42 @@ Page({
    */
   getPageData(callback) {
     let _this = this;
-    App._get('goods/detail', {
-      goods_id: _this.data.id
+    App._post_form('jdshop.jdgoods/detail', {
+      skuid: _this.data.id
     }, result => {
       // 设置顶部导航栏栏
       // _this.setPageBar(result.data.page);
-      console.log(result.data)
-      _this.setData(result.data);
-      let article_content = result.data.detail.content
-      article_content = article_content.replace(/<img/gi, '<img style="max-width:100%;height:auto;display:block" ')
-      .replace(/<section/g, '<div')
-     .replace(/\/section>/g, '\div>');
+      // console.log(result.data)
+      let data = result.data.data
+      _this.setData(data);
+      console.log(data)
+      _this.geturl(data.ItemInfo[0].materialUrl);
+    //   let article_content = result.data.detail.content
+    //   article_content = article_content.replace(/<img/gi, '<img style="max-width:100%;height:auto;display:block" ')
+    //   .replace(/<section/g, '<div')
+    //  .replace(/\/section>/g, '\div>');
 
       
-      _this.setData({
-        detailcontent: article_content
-      });
+      // _this.setData({
+      //   detailcontent: article_content
+      // });
       console.log(_this.data)
+      // 回调函数
+      typeof callback === 'function' && callback();
+    });
+  },
+  geturl(materialUrl){
+    let _this = this;
+    App._get('jdshop.jdgoods/set_url', {
+      url: materialUrl
+    }, result => {
+      // console.log(result.data)
+      let data = result.data.data
+      console.log(data)
+      _this.setData({
+        urljd: data
+      });
+      // console.log(_this.data)
       // 回调函数
       typeof callback === 'function' && callback();
     });

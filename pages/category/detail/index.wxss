@@ -1,0 +1,138 @@
+/* pages/detail/index.wxss */
+.detail{
+  background-color: #ffffff;
+}
+.detail .goback{
+
+  position: absolute;
+  top: 60rpx;
+  left: 30rpx;
+  z-index: 99;
+}
+.detail .goback image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.swiper {
+  width: 750rpx;
+  /* padding: 30rpx; */
+}
+.swiper .banner {
+  width: 750rpx;
+  height: 450rpx;
+}
+.swiper .banner .pic {
+  width: 750rpx;
+  height: 450rpx;
+  /* border-radius: 20rpx; */
+}
+.detail .detail_title{
+  display: flex;
+  flex-direction: column;
+
+
+}
+.detail_title .detail_name{
+  width: 100%;
+  font-size: 35rpx;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.detail_title .detail_price{
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  color: red;
+  font-size: 40rpx;
+}
+
+.detail_shopname{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  align-items: center;
+  font-size: 26rpx;
+  color: #999999;
+
+}
+.detail_shopname .detail_shop{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+.detail_shopname .detail_shop image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.detail_img image{
+  width: 100%;
+}
+.detail_img{
+  margin-bottom: 120rpx;
+}
+.detail_btn{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  /* padding: 20rpx 50rpx; */
+  box-sizing: border-box;
+  background-color: #ffffff;
+  justify-content: center;
+
+}
+.detail_btn{
+  font-size: 26rpx;
+  position: fixed;
+  bottom: 10rpx;
+  /* height: 130rpx; */
+  background: #fff;
+  width: 100%;
+}
+/* .detail_btn>view{
+  padding: 0rpx 120rpx;
+  box-sizing: border-box;
+  background: #eee;
+  border-radius: 40rpx;
+  height: 80rpx;
+  color: #fff;
+}
+.detail_btn>view:first-child{
+  white-space: nowrap;
+  background-color: #ffd504;
+
+}
+.detail_btn>view:last-child{
+  white-space: nowrap;
+  background-color: #ce4a4a;
+    
+} */
+
+.detail_btn>button{
+  padding: 0rpx 120rpx;
+  box-sizing: border-box;
+  background: #eee;
+  border-radius: 40rpx;
+  height: 80rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+.detail_btn>button:first-child{
+  white-space: nowrap;
+  background-color: #ffd504;
+
+}
+.detail_btn>button:last-child{
+  white-space: nowrap;
+  background-color: #ce4a4a;
+    
+}
+
+.detail_btn>button>view{
+
+}
+
+

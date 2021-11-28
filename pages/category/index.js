@@ -18,7 +18,9 @@ Page({
     list: [],
 
     // show
-    notcont: false
+    notcont: false,
+    page:1,
+    shoplist:[],
   },
 
   /**
@@ -59,14 +61,17 @@ Page({
    */
   getCategoryList() {
     let _this = this;
-    App._get('category/index', {}, result => {
+    App._get('jdshop.jdelite/lists', {}, result => {
       let data = result.data;
+      console.log(data);
       _this.setData({
-        list: data.list,
-        templet: data.templet,
-        curNav: data.list.length > 0 ? data.list[0].category_id : true,
-        notcont: !data.list.length
+        list: data,
+        curNav: data.length > 0 ? data[0].elite_id : true,
+        notcont: !data.length,
+        page: 1,
+        shoplist:[],
       });
+      this.getShareList();
     });
   },
 
@@ -78,7 +83,45 @@ Page({
     _this.setData({
       curNav: e.target.dataset.id,
       curIndex: parseInt(e.target.dataset.index),
-      scrollTop: 0
+      scrollTop: 0,
+      page: 1,
+      shoplist:[],
+    });
+    _this.getShareList();
+   
+
+  },
+
+  pullUpLoad(){
+    let _this = this;
+    console.log("====下拉====");
+    console.log(_this.data.shoplist.length)
+    console.log(_this.data.totalCount)
+    if(_this.data.shoplist.length <= _this.data.totalCount){
+      _this.data.page += 1;
+      _this.setData({
+            page: _this.data.page,
+        })
+        _this.getShareList()
+    }
+
+  },
+
+  getShareList(){
+    let _this = this;
+    App._get('jdshop.jdgoods/lists', {
+      elite_id: _this.data.curNav,
+      page:_this.data.page,
+    }, result => {
+      let data = result.data.data;
+      console.log(data);
+      if(result.code == 1){
+        _this.setData({
+          shoplist: _this.data.shoplist.concat(data.list),
+          totalCount: data.totalCount
+        });
+      }
+      
     });
   },
 

@@ -31,9 +31,12 @@ Page({
     _this.setData({
       isLogin: App.checkIsLogin()
     });
-    // 获取当前用户信息
-    _this.getUserDetail();
-    _this.getUrl();
+    if(_this.data.isLogin){
+      // 获取当前用户信息
+      _this.getUserDetail();
+      _this.getUrl();
+    }
+    
     // _this.getDouUser();
     // 更新购物车角标
     App.setCartTabBadge()

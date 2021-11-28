@@ -4,6 +4,7 @@
         "pages/custom/index",
         "pages/category/index",
         "pages/category/list",
+        "pages/category/detail/index",
         "pages/goods/index",
         "pages/goods/comment/comment",
         "pages/search/index",
