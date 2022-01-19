@@ -27,8 +27,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getUserDetail();
-    this.getteam();
+    let _this = this;
+    _this.setData({
+      isLogin: App.checkIsLogin()
+    });
+    if(_this.data.isLogin){
+      this.getUserDetail();
+      this.getteam();
+    }
   },
 
     /**

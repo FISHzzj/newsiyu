@@ -1,0 +1,24 @@
+<scroll-view bindscrolltolower="bindDownLoad" scroll-y style="height: {{scrollHeight}}px; width: 750rpx;" wx:if="{{list.data.length > 0}}">
+  <view class="fl_shop">
+    <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index?id={{item.goods_id}}" wx:for="{{ list.data }}" wx:key="this" >
+      <image src="{{item.goods_image}}"></image>
+      <view class="title">{{item.goods_name}}</view>
+      <view class="fl_item_pt">
+        <text>自购省{{item.self_shop}}元</text>
+        <text>分享赚{{item.push_price}}元</text>
+      </view>
+      <view class="fl_item_price">
+        <text>￥{{item.price}}</text>
+        <text>抢 ></text>
+      </view>
+    </navigator> 
+  </view>
+</scroll-view>
+
+  <!-- 无数据 -->
+  <view wx:if="{{ !isLoading && !list.data.length }}" class="yoshop-notcont" style="margin-top:130px;">
+    <view class="img">
+      <image mode="aspectFit" src="../../images/no_content.png"></image>
+    </view>
+    <text class="cont">亲, 没有相关内容</text>
+  </view>

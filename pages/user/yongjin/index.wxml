@@ -1,25 +1,6 @@
-<view class="container">
-  <!-- tab栏 -->
-  <view class="header f-28 col-3">
-    <view catchtap="bindHeaderTap" class="{{dataType==='all'?'active':''}}" data-type="all">
-      <text>全部</text>
-    </view>
-    <view bindtap="bindHeaderTap" class="{{dataType==='payment'?'active':''}}" data-type="payment">
-      <text>待付款</text>
-    </view>
-    <view bindtap="bindHeaderTap" class="{{dataType==='delivery'?'active':''}}" data-type="delivery">
-      <text>待发货</text>
-    </view>
-    <view bindtap="bindHeaderTap" class="{{dataType==='received'?'active':''}}" data-type="received">
-      <text>待收货</text>
-    </view>
-    <view bindtap="bindHeaderTap" class="{{dataType==='comment'?'active':''}}" data-type="comment">
-      <text>待评价</text>
-    </view>
-  </view>
   <!-- 订单列表 -->
   <view class="goods-detail-box">
-    <scroll-view bindscrolltolower="bindDownLoad" scroll-y style="height: {{scrollHeight}}px; width: 750rpx;margin-top:88rpx;">
+    <scroll-view bindscrolltolower="bindDownLoad" scroll-y style="height: {{scrollHeight}}px; width: 750rpx;">
       <view class="wrapper" wx:if="{{list.data.length > 0}}">
         <!-- <view wx:if="{{list.length}}"> -->
         <view class="m-top20" wx:for="{{list.data}}" wx:key="this" catchtap="navigateToDetail" data-id="{{item.order_id}}">
@@ -36,7 +17,7 @@
           <view class="order-box b-f">
             <view class="order-cont dis-flex">
               <view class="order-num">
-                <text>订单号：{{item.order_id}}</text>
+                <text>{{item.describe}}</text>
               </view>
               <view class="order-time">
                 <text>{{item.create_time}}</text>
@@ -48,18 +29,18 @@
               <view class="order-list-box dis-flex">
                 <view class="left">
                   <view class="dis-flex">
-                    <view class="order-shop-left">
+                    <!-- <view class="order-shop-left">
                       <image src="{{item.goods.file_path}}"></image>
-                    </view>
+                    </view> -->
                     <view class="order-shop-left" style="width: 100%;">
-                      <text class="title" style="font-size: 27rpx;">{{item.goods_name}}</text>
+                      <text class="title" style="font-size: 27rpx;">{{item.describe}}</text>
                     </view>
                   </view>
                 </view>
-                <view class="right dis-flex flex-x-center flex-y-center">
+                <!-- <view class="right dis-flex flex-x-center flex-y-center">
                   <text class="goods-number">共1件</text>
                   <text class="iconfont icon-xiangyoujiantou user-orderJtou"></text>
-                </view>
+                </view> -->
               </view>
             </view>
           </view>
@@ -68,7 +49,7 @@
               <view class="order-left">
                 <view class="text">
                   <text>合计：</text>
-                  <text class="col-m">￥{{item.talent_amount}}</text>
+                  <text class="col-m">￥{{item.money}}</text>
                 </view>
               </view>
               <view class="order-right">
@@ -121,57 +102,4 @@
     </scroll-view>
   </view>
 
-  <!-- 核销码弹出层 -->
-  <zan-popup show="{{ showQRCodePopup }}" bindclose="onToggleQRCodePopup">
-    <view class="pop-qrcode pop-example__container">
-      <view class="pop-title">
-        <text class="f-30">核销二维码</text>
-      </view>
-      <view class="pop-content">
-        <image src="{{ QRCodeImage }}"></image>
-      </view>
-    </view>
-  </zan-popup>
 
-  <!-- 支付方式弹窗 -->
-  <zan-popup show="{{ showPayPopup }}" bindclose="onTogglePayPopup">
-    <view class="pop-orderPay pop-example__container">
-      <view class="pop-title">
-        <text class="f-30">请选择支付方式</text>
-      </view>
-      <view class="pop-content">
-        <view class="pay-method">
-          <form bindsubmit="onSelectPayType" data-value="{{ PayTypeEnum.WECHAT.value }}" report-submit="true">
-            <button formType="submit" class="btn-normal">
-              <view class="pay-item dis-flex flex-x-between">
-                <view class="item-left dis-flex flex-y-center">
-                  <view class="item-left_icon wechat">
-                    <text class="iconfont icon-weixinzhifu"></text>
-                  </view>
-                  <view class="item-left_text">
-                    <text>{{ PayTypeEnum.WECHAT.name }}</text>
-                  </view>
-                </view>
-              </view>
-            </button>
-          </form>
-          <form bindsubmit="onSelectPayType" data-value="{{ PayTypeEnum.BALANCE.value }}" report-submit="true">
-            <button formType="submit" class="btn-normal">
-              <view class="pay-item dis-flex flex-x-between">
-                <view class="item-left dis-flex flex-y-center">
-                  <view class="item-left_icon balance">
-                    <text class="iconfont icon-qiandai"></text>
-                  </view>
-                  <view class="item-left_text">
-                    <text>{{ PayTypeEnum.BALANCE.name }}</text>
-                  </view>
-                </view>
-              </view>
-            </button>
-          </form>
-        </view>
-      </view>
-    </view>
-  </zan-popup>
-
-</view>

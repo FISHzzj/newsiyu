@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="dingdang dis-flex flex-dir-column flex-x-center flex-y-center ">
+        <input type="text" placeholder="请输入订单号" bindblur="shuru" />
+        <view bindtap="tijiaoorder">查询</view>
+    </view>
+</view>

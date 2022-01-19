@@ -1,0 +1,56 @@
+.fl_shop{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* margin: 20rpx; */
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 10rpx 10rpx;
+  }
+  .fl_shop .fl_item_shop{
+    width: 100%;
+    margin-bottom: 10rpx;
+  
+  }
+  .fl_shop .fl_item_shop image{
+    width: 345rpx;
+    height: 345rpx;
+    border-radius: 10rpx;
+  }
+  .fl_shop .fl_item_shop .title{
+    width: 335rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    font-size: 30rpx;
+    margin-bottom: 10rpx;
+  
+  }
+  .fl_shop .fl_item_shop .fl_item_pt{
+    margin-bottom: 20rpx;
+  }
+  .fl_shop .fl_item_shop .fl_item_pt text{
+    background-color: #FF398D;
+    color: #ffffff;
+    font-size: 18rpx;
+    padding: 10rpx;
+    border-radius: 5rpx;
+    box-sizing: border-box;
+    margin-right: 20rpx;
+  }
+  .fl_shop .fl_item_shop .fl_item_price{
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    align-items: center;
+  
+  }
+  .fl_shop .fl_item_shop .fl_item_price text:last-child{
+    background-color: #FF398D;
+    color: #fff;
+    border-radius: 26rpx;
+    text-align: center;
+    padding: 10rpx 20rpx;
+    box-sizing: border-box;
+  }

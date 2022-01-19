@@ -1,10 +1,10 @@
 const App = getApp();
 
 // 枚举类：发货方式
-import DeliveryTypeEnum from '../../utils/enum/DeliveryType.js';
+// import DeliveryTypeEnum from '../../utils/enum/DeliveryType.js';
 
 // 枚举类：支付方式
-import PayTypeEnum from '../../utils/enum/order/PayType'
+// import PayTypeEnum from '../../utils/enum/order/PayType'
 
 Page({
 
@@ -17,8 +17,8 @@ Page({
     list: [], // 订单列表
     scrollHeight: null, // 列表容器高度
 
-    DeliveryTypeEnum, // 配送方式
-    PayTypeEnum, // 支付方式
+    // DeliveryTypeEnum, // 配送方式
+    // PayTypeEnum, // 支付方式
 
     no_more: false, // 没有更多数据
     isLoading: true, // 是否正在加载中
@@ -49,7 +49,8 @@ Page({
   onShow() {
     // 获取订单列表
     this.getOrderList();
-    this.getTok_order();
+    // this.getTok_order();
+    console.log(2222);
   },
     /**
    * 获取订单列表
@@ -82,9 +83,9 @@ Page({
    */
   getOrderList(isPage, page) {
     let _this = this;
-    App._get('user.order/lists', {
+    App._post_form('balance.log/lists', {
       page: page || 1,
-      dataType: _this.data.dataType
+    //   dataType: _this.data.dataType
     }, result => {
       let resList = result.data.list,
         dataList = _this.data.list;

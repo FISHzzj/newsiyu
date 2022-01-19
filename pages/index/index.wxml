@@ -41,25 +41,27 @@
     </view>
     
   </view>
-  <view class="shengji">升级专区</view>
+  <view class="shengji" bindtap="gojdshop">
+    <image src="{{file_path}}"></image>
+  </view>
   <view class="guanggao">
     <!-- <image src="../../images/bg/mine-inv-bg.jpg"></image> -->
-    <view class="ggfirst" >
-      <image src="../../images/bg/ly1.png"></image>
+    <view class="ggfirst" bindtap="godyshop">
+      <image src="{{dyleftimg}}"></image>
     </view>
     <view class="ggsen">
-      <image src="../../images/bg/poster_bg.png" ></image>
-      <image src="../../images/bg/jd.png" ></image>
+      <image src="{{dyrighttop}}" bindtap="godyshop1" ></image>
+      <image src="{{dyrightbottom}}"  bindtap="godyshop2"></image>
     </view>
   </view>
   <view class="fenglei">
     <view class="fl_tou">
       <view class="fl_item" bindtap="getshop" data-active="0">
-        <text class="{{active == 0 ? 'fl_active': ''}}" >精选好物品</text>
+        <text class="{{active == 0 ? 'fl_active': ''}}" >精选好物</text>
         <text class="{{active == 0? 'fl_text_active': ''}}">返佣必备</text>
       </view>
       <view class="fl_item" bindtap="getshop" data-active="1">
-        <text class="{{active == 1 ? 'fl_active': ''}}">看直播选好物</text>
+        <text class="{{active == 1 ? 'fl_active': ''}}">直播选好物</text>
         <text class="{{active == 1 ? 'fl_text_active': ''}}">直播选好物</text>
       </view>
       <view class="fl_item" bindtap="getshop" data-active="2" style="display: none;">
@@ -69,40 +71,32 @@
     </view>
     <view class="fl_bottom">
       <view class="fl_bottom_scroll">
-        <view class="{{flbactive == 0? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="0">高佣精选</view>
-        <view class="{{flbactive == 1? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="1">爆品</view>
-        <view class="{{flbactive == 2? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="2">新人必选</view>
-        <view class="{{flbactive == 3? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="3">食品</view>
-        <view class="{{flbactive == 4? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="4">百货</view>
-        <view class="{{flbactive == 5? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="5">数码家电</view>
-        <view class="{{flbactive == 6? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="6">珠宝</view>
-        <view class="{{flbactive == 7? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="7">美妆个护</view>
-        <view class="{{flbactive == 8? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="8">女装</view>
-        <view class="{{flbactive == 9? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="9">男装</view>
-        <view class="{{flbactive == 10? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="10">运动</view>
+        <view wx:for="{{categoryList}}" wx:key="index" class="{{flbactive == index ? 'flb_active' : ''}}" bindtap="getflbshop" data-flbactive="{{index}}" data-dyshopid="{{item.category_id}}">{{item.name}}</view>
       </view>
       <view class="fl_bottom_bili">
-        <view class="{{flactive == 0? 'flb_active' : ''}}" bindtap="getflshop" data-flactive="0">综合</view>
-        <view class="{{flactive == 1? 'flb_active' : ''}}" bindtap="getflshop" data-flactive="1">佣金比例</view>
-        <view class="{{flactive == 2? 'flb_active' : ''}}" bindtap="getflshop" data-flactive="2">价格排序</view>
-        <view class="{{flactive == 3? 'flb_active' : ''}}" bindtap="getflshop" data-flactive="3">销量排序</view>
+        <view class="{{flactive == 0? 'flb_active' : ''}}" bindtap="getflshop" data-flactive="0" data-activename="all">综合</view>
+        <view class="{{flactive == 1? 'flb_active' : ''}}" bindtap="getflshop" data-flactive="1" data-activename="commission">佣金比例</view>
+        <view class="{{flactive == 2? 'flb_active' : ''}}" bindtap="getflshop" data-flactive="2" data-activename="price">价格排序</view>
+        <view class="{{flactive == 3? 'flb_active' : ''}}" bindtap="getflshop" data-flactive="3" data-activename="sale">销量排序</view>
       </view>
     </view>
-    <view class="fl_shop">
-      <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index?id={{item.goods_id}}" wx:for="{{ list.data }}" wx:key="this" >
-        <image src="{{item.goods_image}}"></image>
-        <view class="title">{{item.goods_name}}</view>
-        <view class="fl_item_pt">
-          <text>自购省{{item.savemoney}}元</text>
-          <text>分享赚{{item.sharemoney}}元</text>
-        </view>
-        <view class="fl_item_price">
-          <text>￥{{item.price}}</text>
-          <text>抢 ></text>
-        </view>
-      </navigator>
-      
-    </view>
+    <scroll-view bindscrolltolower="bindDownLoad" scroll-y style="height: {{scrollHeight}}px; width: 750rpx;" wx:if="{{list.data.length > 0}}">
+      <view class="fl_shop">
+        <navigator hover-class="navigator-hover" class="fl_item_shop" url="/pages/detail/index?id={{item.goods_id}}" wx:for="{{ list.data }}" wx:key="this" >
+          <image src="{{item.goods_image}}"></image>
+          <view class="title">{{item.goods_name}}</view>
+          <view class="fl_item_pt">
+            <text>自购省{{item.self_shop}}元</text>
+            <text>分享赚{{item.push_price}}元</text>
+          </view>
+          <view class="fl_item_price">
+            <text>￥{{item.price}}</text>
+            <text>抢 ></text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+   
   </view>
 </view>
 

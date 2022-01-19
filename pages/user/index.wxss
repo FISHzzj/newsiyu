@@ -3,7 +3,7 @@
 .user {
   position: relative;
   background: #fff;
-  margin-bottom: 145rpx;
+  margin-bottom: 344rpx;
 }
 
 .user-header {

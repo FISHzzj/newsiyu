@@ -67,7 +67,13 @@
         "pages/user/douyin/index",
         "pages/user/zhanhao/index",
         "pages/user/invite/index",
-        "pages/user/setting/index"
+        "pages/user/setting/index",
+        "pages/jdshop/index",
+        "pages/guanggao/index",
+        "pages/dyshop/index",
+        "pages/user/dingdang/index",
+        "pages/user/yongjin/index",
+        "pages/user/shouyi/mingxi/index"
     ],
     "window": {
         "navigationBarBackgroundColor": "#ffffff",
@@ -84,6 +90,12 @@
             {
                 "pagePath": "pages/index/index",
                 "text": "首页",
+                "iconPath": "images/tabbar/liveRoom.png",
+                "selectedIconPath": "images/tabbar/liveRooma.png"
+            },
+            {
+                "pagePath": "pages/guanggao/index",
+                "text": "广告",
                 "iconPath": "images/tabbar/liveRoom.png",
                 "selectedIconPath": "images/tabbar/liveRooma.png"
             },

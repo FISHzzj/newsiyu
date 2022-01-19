@@ -65,6 +65,18 @@
                     "pathName": "pages/user/invite/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/jdshop/index",
+                    "pathName": "pages/jdshop/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/user/dingdang/index",
+                    "pathName": "pages/user/dingdang/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

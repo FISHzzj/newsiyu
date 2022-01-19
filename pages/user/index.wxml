@@ -49,7 +49,7 @@
       </form>
       <view class="order-navbar-footer dis-flex m-top10">
         <view class="order-navbar-item flex-box">
-          <form bindsubmit="onTargetOrder" data-type="all" report-submit="true">
+          <form report-submit="true">
             <button formType="submit" class="btn-normal">
               <!-- <text class="order-navbar__icon iconfont icon-form"></text> -->
               <text class="order-navbar__name">今日评估</text>
@@ -58,7 +58,7 @@
           </form>
         </view>
         <view class="order-navbar-item flex-box">
-          <form bindsubmit="onTargetOrder" data-type="payment" report-submit="true">
+          <form  report-submit="true">
             <button formType="submit" class="btn-normal">
               <!-- <text class="order-navbar__icon iconfont icon-daifukuan"></text> -->
               <text class="order-navbar__name">昨日评估</text>
@@ -67,7 +67,7 @@
           </form>
         </view>
         <view class="order-navbar-item flex-box">
-          <form bindsubmit="onTargetOrder" data-type="received" report-submit="true">
+          <form report-submit="true">
             <button formType="submit" class="btn-normal">
               <!-- <text class="order-navbar__icon iconfont icon-daishouhuo"></text> -->
               <text class="order-navbar__name">本月评估</text>
@@ -88,6 +88,61 @@
       <view class="order-navbar-footer dis-flex m-top10" style="padding: 0px 17%;font-size: 24rpx;">
         *每月25号结算上个月确认收到货订单的收入*
       </view>
+    </view>
+    <!-- 广告收益 -->
+    <view class="order-navbar" style="bottom: -320rpx;">
+      <form  report-submit="true">
+        <button formType="submit" class="btn-normal">
+          <view class="order-navbar-header dis-flex">
+            <text class="f-30">广告收益</text>
+            <!-- <navigator class="dis-flex flex-y-center" url="/pages/user/shouyi/index">
+              <text class="f-24 col-6">收益明细</text>
+              <text class="iconfont icon-xiangyoujiantou user-orderJtou"></text>
+            </navigator> -->
+          </view>
+        </button>
+      </form>
+      <view class="order-navbar-footer dis-flex m-top10">
+        <view class="order-navbar-item flex-box">
+          <form  report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <!-- <text class="order-navbar__icon iconfont icon-form"></text> -->
+              <text class="order-navbar__name">预计收益</text>
+              <text class="order-badge" >0</text>
+            </button>
+          </form>
+        </view>
+        <view class="order-navbar-item flex-box">
+          <form  report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <!-- <text class="order-navbar__icon iconfont icon-daifukuan"></text> -->
+              <text class="order-navbar__name">已结算</text>
+              <text class="order-badge" >0</text>
+            </button>
+          </form>
+        </view>
+        <view class="order-navbar-item flex-box">
+          <form  report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <!-- <text class="order-navbar__icon iconfont icon-daishouhuo"></text> -->
+              <text class="order-navbar__name">可提现</text>
+              <text class="order-badge" >0</text>
+            </button>
+          </form>
+        </view>
+        <!-- <view class="order-navbar-item flex-box">
+          <form bindsubmit="onTargetOrder" data-type="refund" report-submit="true">
+            <button formType="submit" class="btn-normal">
+              <text class="order-navbar__icon iconfont icon-shouhou"></text>
+              <text class="order-navbar__name">退款/售后</text>
+              <text class="order-badge" wx:if="{{orderCount.refund > 0}}">{{orderCount.refund}}</text>
+            </button>
+          </form>
+        </view> -->
+      </view>
+      <!-- <view class="order-navbar-footer dis-flex m-top10" style="padding: 0px 17%;font-size: 24rpx;">
+        *每月25号结算上个月确认收到货订单的收入*
+      </view> -->
     </view>
   </view>
   <!-- 我的钱包 -->
@@ -112,10 +167,10 @@
           </form>
         </view>
         <view class="order-navbar-item flex-box">
-          <form bindsubmit="onTargetOrder" data-type="received" report-submit="true">
+          <form bindsubmit="onTargetOrder" data-type="yongjin" report-submit="true">
             <button formType="submit" class="btn-normal">
               <text class="order-navbar__icon iconfont icon-daishouhuo"></text>
-              <text class="order-navbar__name">拉新奖励</text>
+              <text class="order-navbar__name">佣金明细</text>
               <!-- <text class="order-badge" >0</text> -->
             </button>
           </form>
@@ -197,6 +252,17 @@
           <view class="menus-item__left flex-box dis-flex flex-y-center">
             <text class="iconfont icon-youhuiquan f-34"></text>
             <text class="menus-item__name f-30">我的设置</text>
+          </view>
+          <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
+            <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>
+          </view>
+        </view>
+      </button>
+      <button formType="submit" class="btn-normal" bindtap="uploadhao">
+        <view class="menus-item dis-flex b-f">
+          <view class="menus-item__left flex-box dis-flex flex-y-center">
+            <text class="iconfont icon-youhuiquan f-34"></text>
+            <text class="menus-item__name f-30">上传订单号</text>
           </view>
           <view class="menus-item__right flex-box dis-flex flex-x-end flex-y-center">
             <text class="iconfont icon-xiangyoujiantou f-26 col-7"></text>

@@ -126,11 +126,16 @@ Page({
       payment: '/pages/order/index?type=payment',
       received: '/pages/order/index?type=received',
       refund: '/pages/order/refund/index',
+      yongjin: '/pages/user/yongjin/index'
     };
     // 转跳指定的页面
     wx.navigateTo({
       url: urls[e.currentTarget.dataset.type]
     })
+  },
+
+  yongjinmingxi(){
+
   },
 
   /**
@@ -174,6 +179,12 @@ Page({
   setting(){
     wx.navigateTo({
       url: '/pages/user/setting/index'
+    })
+  },
+
+  uploadhao(){
+    wx.navigateTo({
+      url: '/pages/user/dingdang/index'
     })
   },
   /**

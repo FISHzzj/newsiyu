@@ -31,7 +31,7 @@
       <!-- <text>赚￥0</text> -->
     </button>
     <button class="dis-flex flex-dir-column flex-x-center " >
-      <text bindtap='copyText' data-text="https://u.jd.com/nwug4sb">复制链接</text>
+      <text bindtap='copyText' data-text="{{detail.shop_url}}">复制链接</text>
       <!-- <text>省￥5.05</text> -->
     </button>
   </view>

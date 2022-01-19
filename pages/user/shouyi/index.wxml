@@ -3,13 +3,13 @@
   <view class="shouyi_yue">
     <view>
       <view>订单账号余额(元)</view>
-      <view style="color: #fff;">0</view>
-      <view>账户明细></view>
+      <view style="color: #fff;">{{userInfo.balance}}</view>
+      <view bindtap="mingxi" data-coinid="{{balance}}">账户明细></view>
     </view>
     <view>
       <view>活动奖励余额(元)</view>
-      <view style="color: #fff;">0</view>
-      <view>账户明细></view>
+      <view style="color: #fff;">{{userInfo.points}}</view>
+      <view bindtap="mingxi" data-coinid="{{points}}">账户明细></view>
     </view>
   </view>
   <view class="tixian" bindtap="tixian">立即提现</view>

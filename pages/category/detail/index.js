@@ -22,9 +22,9 @@ Page({
    */
   onLoad: function (options) {
     let _this = this;
-    
+    console.log(options)
     _this.setData(options);
-    console.log(_this.data)
+    // console.log(_this.data)
     _this.getPageData();
    
   },

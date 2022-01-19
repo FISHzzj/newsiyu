@@ -1,0 +1,19 @@
+.dingdang{      
+    text-align: center;
+}
+.dingdang input{
+    width: 100%;
+    border: 1rpx solid #eeeeee;
+    margin-top: 20rpx;
+    padding: 10rpx 10rpx;
+}
+
+.dingdang view{
+    border: 1px solid #FF398D;
+    background-color: #FF398D;
+    color: #fff;
+    width: 100rpx;
+    margin-top: 20rpx;
+    border-radius: 30rpx;
+    padding: 10rpx 50rpx;
+}
